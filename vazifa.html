@@ -5,19 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="form.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div class="container form_container">
-      <form id="Todoform">
-        <div class="form_div">
-          <input id="searchInp" type="text" required placeholder="Enter todo" />
-          <button id="submitBtn" type="submit">Submit</button>
+    <div class="umumiv-wrapper">
+      <div class="container form_container">
+        <div class="wrapper_color">
+          <h2 class="h2">To Do App</h2>
+          <button id="darkmodeBtn" class="header-btnn">
+            <img
+              id="darkmodeImg"
+              src="images/light-mode.png"
+              alt=""
+              width="24px"
+            />
+            Light mode
+          </button>
         </div>
-        <ul id="productList">
-          <li></li>
-        </ul>
-      </form>
+        <form id="Todoform">
+          <div class="form_div">
+            <input
+              id="searchInp"
+              type="text"
+              required
+              placeholder="Enter todo"
+            />
+            <button id="submitBtn" type="submit">Add</button>
+          </div>
+        </form>
+        <ul id="productList"></ul>
+      </div>
+      <modal id="modal" class="modal hidden">
+        <form id="editform">
+          <div class="modal_div">
+            <input
+              id="editInp"
+              type="text"
+              required
+              placeholder="Edit todo..."
+            />
+            <button id="editBtn" type="submit">Edit</button>
+          </div>
+        </form>
+      </modal>
+      <div id="overlay" class="overlay hidden"></div>
     </div>
     <script src="form.js"></script>
   </body>
